@@ -1,5 +1,19 @@
 const formularios = document.querySelectorAll("[data-auth]");
 
+async function lerResposta(resposta) {
+  const corpo = await resposta.text();
+
+  if (!corpo.trim()) {
+    throw new Error("O servidor não retornou uma resposta. Inicie o servidor do projeto e tente novamente.");
+  }
+
+  try {
+    return JSON.parse(corpo);
+  } catch {
+    throw new Error("O servidor retornou uma resposta inválida. Verifique se o servidor do projeto está ativo.");
+  }
+}
+
 document.querySelectorAll("[data-mostrar-senha]").forEach((botao) => {
   botao.addEventListener("click", () => {
     const campo = document.getElementById(botao.dataset.mostrarSenha);
@@ -33,7 +47,7 @@ formularios.forEach((formulario) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
       });
-      const resultado = await resposta.json();
+      const resultado = await lerResposta(resposta);
 
       if (!resposta.ok) {
         throw new Error(resultado.erro || "Não foi possível concluir a operação.");

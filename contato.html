@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Sobre | TrocaTicket</title>
+		<title>Contato | TrocaTicket</title>
 		<link rel="stylesheet" href="CSS/style.css">
 	</head>
-	<body class="pagina-sobre">
+	<body class="pagina-contato">
 		<header class="cabecalho sobre-cabecalho">
 			<a href="index.html" class="titulo_pagina">Troca<span>Ticket</span></a>
 			<p class="subtitulo_pagina">Eventos & ingressos</p>
@@ -14,7 +14,7 @@
 				<a href="index.html" class="cabecalho_nav_link">Início</a>
 				<a href="eventos.html" class="cabecalho_nav_link">Eventos</a>
 				<a href="sobre.html" class="cabecalho_nav_link sobre-nav_ativo">Sobre</a>
-				<a href="contato.html" class="cabecalho_nav_link">Contato</a>
+				<a href="contato.html" class="cabecalho_nav_link contato-nav_ativo" aria-current="page">Contato</a>
 				<a href="login.html" class="cabecalho_nav_link_login">Entrar <span aria-hidden="true">↗</span></a>
 			</nav>
 		</header>
@@ -22,42 +22,43 @@
 		<main class="sobre-conteudo">
 			<section class="sobre-hero">
 				<div class="sobre-texto">
-					<p class="sobre-etiqueta">Fale Conosco</p>
+					<p class="sobre-etiqueta">Fale conosco</p>
 					<h1>CONTATO</h1>
-					<p class="sobre-introducao">Entre em contato sempre que tiver dúvidas, e para avisar erros ocorridos.</p>
+					<p class="sobre-introducao">Estamos aqui para ajudar com dúvidas, sugestões e qualquer problema durante sua experiência no TrocaTicket.</p>
 
 					<div class="sobre-detalhes">
 						<article class="sobre-detalhe">
-							<p>E-mails</p>
-							<span>Aqui fica os links para os E-mails dos responsáveis</span>
+							<p>Suporte</p>
+							<span>Para dúvidas sobre ingressos e acesso, escreva para <a class="contato-link" href="mailto:suporte@trocaticket.com">suporte@trocaticket.com</a>.</span>
 						</article>
 						<article class="sobre-detalhe">
-							<p>LinkedIn</p>
-							<span>Aqui fica os links para o LinkedIn</span>
+							<p>Parcerias</p>
+							<span>Organiza eventos? Fale com a equipe pelo <a class="contato-link" href="mailto:parcerias@trocaticket.com">parcerias@trocaticket.com</a> ou visite nosso <a class="contato-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</span>
 						</article>
 					</div>
 				</div>
 
-				<div class="ticket-visual" aria-label="Exemplo de ingresso digital emitido">
-					<div class="ticket-status"><span>✓</span></div>
-					<h2>Seu ingresso está pronto!</h2>
-					<p class="ticket-confirmacao">A confirmação chegou. Agora é só aproveitar o evento.</p>
-					<div class="ticket-linha"></div>
-					<div class="ticket-info ticket-info-duplo">
-						<div><small>Ticket ID</small><strong>TT-2026-0147</strong></div>
-						<div><small>Valor</small><strong>R$ 124,90</strong></div>
+				<div class="contato-painel" aria-labelledby="contato-painel-titulo">
+					<div class="contato-painel_cabecalho">
+						<p class="contato-painel_etiqueta">Central de atendimento</p>
+						<span class="contato-painel_status"><i aria-hidden="true"></i>Online</span>
 					</div>
-					<div class="ticket-info">
-						<small>Data e horário</small>
-						<strong>23 de ago. de 2026, 20:30</strong>
+					<div class="contato-painel_simbolo" aria-hidden="true">TT</div>
+					<h2 id="contato-painel-titulo">Vamos resolver isso juntos.</h2>
+					<p class="contato-painel_intro">Escolha um canal e fale com a equipe que cuida da sua experiência.</p>
+					<div class="contato-canais">
+						<a class="contato-canal" href="mailto:suporte@trocaticket.com">
+							<span class="contato-canal_numero">01</span>
+							<span><small>Dúvidas e suporte</small><strong>Enviar um e-mail</strong></span>
+							<span aria-hidden="true">↗</span>
+						</a>
+						<a class="contato-canal" href="mailto:parcerias@trocaticket.com">
+							<span class="contato-canal_numero">02</span>
+							<span><small>Eventos e parcerias</small><strong>Falar com a equipe</strong></span>
+							<span aria-hidden="true">↗</span>
+						</a>
 					</div>
-					<div class="ticket-cartao">
-						<span class="ticket-circulos" aria-hidden="true"></span>
-						<strong>Cliente TrocaTicket</strong>
-						<small>•••• 6142</small>
-					</div>
-					<div class="ticket-codigo" aria-hidden="true">|||||||||||||||||||||||||</div>
-					<p class="ticket-numero">4 1 7 8 2 0 5 3 9 1 6 4 7 2</p>
+					<p class="contato-painel_rodape">Respondemos de segunda a sexta, das 9h às 18h.</p>
 				</div>
 			</section>
 		</main>

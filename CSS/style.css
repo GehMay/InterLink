@@ -952,7 +952,8 @@ footer,
 }
 
 /* Pagina sobre */
-.pagina-sobre {
+.pagina-sobre,
+.pagina-contato {
     --sobre-fundo: #f7f3ed;
     --sobre-superficie: #ffffff;
     --sobre-azul: #315d73;
@@ -969,7 +970,8 @@ footer,
     border-bottom: 1px solid rgba(25, 35, 43, 0.14);
 }
 
-.pagina-sobre, .titulo_pagina {
+.pagina-sobre .titulo_pagina,
+.pagina-contato .titulo_pagina {
     color: var(--sobre-azul-escuro);
     font-size: 1.45rem;
     font-weight: 800;
@@ -977,11 +979,13 @@ footer,
     text-decoration: none;
 }
 
-.pagina-sobre .titulo_pagina span {
+.pagina-sobre .titulo_pagina span,
+.pagina-contato .titulo_pagina span {
     color: var(--sobre-coral);
 }
 
-.pagina-sobre .subtitulo_pagina {
+.pagina-sobre .subtitulo_pagina,
+.pagina-contato .subtitulo_pagina {
     margin: 0 auto 0 10px;
     color: var(--sobre-azul-escuro);
     font-size: 0.72rem;
@@ -990,12 +994,15 @@ footer,
     text-transform: uppercase;
 }
 
-.pagina-sobre .cabecalho_nav {
+.pagina-sobre .cabecalho_nav,
+.pagina-contato .cabecalho_nav {
     gap: 24px;
 }
 
 .pagina-sobre .cabecalho_nav_link,
-.pagina-sobre .cabecalho_nav_link_login {
+.pagina-sobre .cabecalho_nav_link_login,
+.pagina-contato .cabecalho_nav_link,
+.pagina-contato .cabecalho_nav_link_login {
     padding: 8px 0;
     color: var(--sobre-azul-escuro);
     font-size: 0.82rem;
@@ -1003,18 +1010,22 @@ footer,
 }
 
 .pagina-sobre .cabecalho_nav_link:hover,
-.pagina-sobre .sobre-nav_ativo {
+.pagina-sobre .sobre-nav_ativo,
+.pagina-contato .cabecalho_nav_link:hover,
+.pagina-contato .contato-nav_ativo {
     color: var(--sobre-coral);
 }
 
-.pagina-sobre .cabecalho_nav_link_login {
+.pagina-sobre .cabecalho_nav_link_login,
+.pagina-contato .cabecalho_nav_link_login {
     padding: 10px 16px;
     border: 1px solid var(--sobre-azul-escuro);
     border-radius: 999px;
     background: transparent;
 }
 
-.pagina-sobre .cabecalho_nav_link_login:hover {
+.pagina-sobre .cabecalho_nav_link_login:hover,
+.pagina-contato .cabecalho_nav_link_login:hover {
     background: var(--sobre-azul-escuro);
     color: #fff;
 }
@@ -1095,6 +1106,158 @@ footer,
     color: #59636a;
     font-size: 0.92rem;
     line-height: 1.55;
+}
+
+.contato-link {
+    color: var(--sobre-azul);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contato-link:hover {
+    color: var(--sobre-coral);
+}
+
+.contato-painel {
+    min-height: 630px;
+    padding: 32px;
+    border: 1px solid rgba(25, 35, 43, 0.14);
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(231, 240, 255, 0.76));
+    box-shadow: 0 26px 80px rgba(49, 93, 115, 0.2);
+    color: var(--sobre-azul-escuro);
+    animation: contato-painel-entra 0.9s 0.12s ease both;
+}
+
+.contato-painel_cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.contato-painel_etiqueta {
+    color: var(--sobre-azul);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contato-painel_status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #3f6c53;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.contato-painel_status i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5b9b70;
+    box-shadow: 0 0 0 5px rgba(91, 155, 112, 0.15);
+}
+
+.contato-painel_simbolo {
+    display: grid;
+    width: 86px;
+    height: 86px;
+    margin: 62px auto 30px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--sobre-azul-escuro);
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: -0.08em;
+    box-shadow: 12px 12px 0 var(--sobre-coral);
+}
+
+.contato-painel h2 {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-align: center;
+}
+
+.contato-painel_intro {
+    max-width: 300px;
+    margin: 14px auto 30px;
+    color: #59636a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contato-canais {
+    display: grid;
+    gap: 10px;
+}
+
+.contato-canal {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 16px;
+    border: 1px solid rgba(25, 35, 43, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--sobre-azul-escuro);
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato-canal:hover {
+    border-color: var(--sobre-coral);
+    box-shadow: 0 8px 20px rgba(49, 93, 115, 0.12);
+    transform: translateY(-2px);
+}
+
+.contato-canal_numero {
+    color: var(--sobre-coral);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.contato-canal small,
+.contato-canal strong {
+    display: block;
+}
+
+.contato-canal small {
+    margin-bottom: 3px;
+    color: #727b87;
+    font-size: 0.68rem;
+}
+
+.contato-canal strong {
+    font-size: 0.84rem;
+}
+
+.contato-canal > span:last-child {
+    color: var(--sobre-coral);
+    font-size: 1.1rem;
+}
+
+.contato-painel_rodape {
+    margin-top: 28px;
+    color: #727b87;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+@keyframes contato-painel-entra {
+    from { opacity: 0; transform: translateX(28px) rotate(1deg); }
+    to { opacity: 1; transform: translateX(0) rotate(0); }
 }
 
 .ticket-visual {
@@ -1271,7 +1434,7 @@ footer,
         grid-template-columns: 1fr;
     }
 
-    .ticket-visual {
+    .contato-painel {
         min-height: 580px;
     }
 }
